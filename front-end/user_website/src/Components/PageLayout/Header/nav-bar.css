@@ -1,0 +1,121 @@
+.navbar-light {
+  background: -webkit-linear-gradient(left, #33ccff 0%, #ff99cc 100%);
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2, green, blue, alpha);
+  height: fit-content;
+}
+
+.navbar-logo {
+  position: relative;
+  margin-right: 5vw;
+  text-decoration: none;
+  color: transparent;
+  display: flex;
+  line-height: 0;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.navbar .nav-left-side {
+  flex: 40%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.navbar-search {
+  max-width: 700px;
+  background-color: white;
+  height: 40px;
+  flex: 1;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-search-input {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  border: none;
+  margin-left: 20px;
+  outline: none;
+}
+
+.navbar-search-btn {
+  outline: none !important;
+  position: relative;
+  background-color: rgb(73, 174, 255);
+  border: none;
+  height: 34px;
+  width: 50px;
+  border-radius: 15px;
+  margin-right: 4px;
+}
+
+.navbar-search-btn:hover {
+  background-color: rgb(34, 143, 233);
+  cursor: pointer;
+}
+
+.navbar-search-btn-icon {
+  position: absolute;
+  text-decoration: none;
+  color: transparent;
+  display: block;
+  line-height: 0;
+  height: 20px;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%) translateX(40%);
+}
+
+.navbar .nav-right-side {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.navbar-btn {
+  outline: none !important;
+  position: relative;
+  background-color: rgb(15, 113, 194);
+  color: white;
+  height: 40px;
+  width: 80px;
+  margin: 0 0 0 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+}
+
+.navbar-btn:hover {
+  background-color: rgb(9, 66, 112);
+  cursor: pointer;
+}
+
+.navbar-language {
+  height: 40px;
+  width: 50px;
+  background: white;
+  margin: 0 20px 0 20px;
+  border-radius: 15px;
+  display: flex;
+  position: relative;
+}
+
+.navbar-language-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.navbar-language-icon-vietnam {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+}
