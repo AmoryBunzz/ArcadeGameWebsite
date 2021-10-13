@@ -8,7 +8,7 @@ const userRoute = require('./routes/user');
 
 app.use(bodyParser.json());
 
-app.use('/posts', gameRoute);
+app.use('/game', gameRoute);
 app.use('/user', userRoute);
 
 module.exports = app

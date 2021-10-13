@@ -1,6 +1,16 @@
 const models = require('../models');
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const Validator = require('fastest-validator')
+
+const schema = {
+    Name: {type:"string", optional:true},
+    Email: {type:"string", optional: false},
+    Password: {type:"string", optional: false},
+    Gender: {type:"number", optional:false},
+}
+
+const v = new Validator();
 
 function signUp(req, res){
     models.User.findOne({where:{Email:req.body.Email}}).then(result => {
@@ -21,6 +31,14 @@ function signUp(req, res){
                         DayOfBirth: "0000-00-00",
                         Avatar: "",
                         Friends: ""
+                    }
+
+                    const validationResponse = v.validate(user, schema);
+                    if(validationResponse !== true){
+                        return res.status(400).json({
+                            message: "Validation failed",
+                            errors: validationResponse
+                        });
                     }
                 
                     models.User.create(user).then(result => {
@@ -54,7 +72,7 @@ function login(req, res) {
             bcryptjs.compare(req.body.Password, user.Password, function(err, result){
                 if(result){
                     const token = jwt.sign({
-                        Email: user.Email,
+                        email: user.email,
                         userId: user.id
                     }, 'secret', function(err, token){
                         res.status(200).json({

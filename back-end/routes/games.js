@@ -1,12 +1,13 @@
 const express = require('express');
 const gameController = require('../controllers/game.controller');
+const checkAuthMiddleware = require('../middleware/check-auth');
 
 const router = express.Router();
 
-router.post('/', gameController.save);
+router.post('/', checkAuthMiddleware.checkAuth, gameController.save);
 router.get('/', gameController.index);
 router.get('/:id', gameController.show);
-router.patch('/:id', gameController.update);
-router.delete('/:id', gameController.destroy);
+router.patch('/:id', checkAuthMiddleware.checkAuth, gameController.update);
+router.delete('/:id', checkAuthMiddleware.checkAuth, gameController.destroy);
 
 module.exports = router;

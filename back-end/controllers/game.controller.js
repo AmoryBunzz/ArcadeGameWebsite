@@ -109,7 +109,7 @@ function update(req, res){
     models.Game.update(updateGame, {where: {id:id}}).then(result => {
         res.status(200).json({
             message: "Game updated successfully",
-            post: updatedPost
+            post: updateGame
         });
     }).catch(error => {
         res.status(200).json({
