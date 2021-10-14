@@ -17,7 +17,7 @@ const schema = {
 const v = new Validator();
 
 // This function create a new Game post and save it to database
-function save(req,res){
+function save(req, res){
     const game = {
         DevID: req.body.DevID,
         IFrame: req.body.IFrame,
