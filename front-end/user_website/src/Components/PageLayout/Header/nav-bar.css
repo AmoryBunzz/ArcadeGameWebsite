@@ -14,7 +14,7 @@
   line-height: 0;
   height: 50px;
   border-radius: 10px;
-  /* margin-left: 100px; */
+  margin-left: 10px;
 }
 
 .navbar .nav-left-side {
@@ -68,6 +68,7 @@
 .navbar .nav-right-side {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
   margin-right: 5%;
 }
 
@@ -78,7 +79,7 @@
   color: white;
   height: 35px;
   width: 70px;
-  margin: 0 0 0 16px;
+  margin: 0 0 0px 16px;
   border-radius: 10px;
   font-weight: 500;
   border: none;
@@ -92,11 +93,10 @@
 .navbar-dropdown {
   height: 40px;
   width: 45px;
-  margin: 0 10px 10px 10px;
+  /* margin: 0 0 20px 0; */
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .navbar-dropdown:hover {
@@ -107,15 +107,13 @@
 .navbar-dropdown-language {
   height: 50%;
   width: 60%;
-  /* top: 50%;
-  transform: translateY(-50%); */
+  margin-top: 10px;
 }
 
 .navbar-dropdown-mailbox {
   height: 60%;
   width: 60%;
-  /* top: 50%;
-  transform: translateY(-50%); */
+  margin-top: 8px;
 }
 
 .navbar-dropdown-avatar {
@@ -123,10 +121,22 @@
   width: 100%;
 }
 
-.navbar .nav .caret {
-  display: flex;
-}
-
 .navbar a {
   color: white;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.navbar-expand .navbar-collapse {
+  width: fit-content;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.dropdown-toggle {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 20px;
 }

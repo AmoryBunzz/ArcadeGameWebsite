@@ -22,7 +22,7 @@ function NavBar({setShowLogin, setShowSignUp, user}) {
     
     if (user){
         buttons = (
-                <div className="nav-right-side collapse navbar-collapse">
+            <div className="nav-right-side collapse navbar-collapse">
                 <Collapse navbar isOpen={collapseOpen}>
                     <UncontrolledDropdown nav>
                         <DropdownToggle
@@ -35,18 +35,8 @@ function NavBar({setShowLogin, setShowSignUp, user}) {
                                 <img src={bell_icon} className="navbar-dropdown-mailbox" alt="Mailbox" />
                             </div>
                         </DropdownToggle>
-                        
                         <DropdownMenu className="dropdown-navbar" right tag="ul">
-                            <NavLink tag="li">
-                                <DropdownItem className="nav-item">Profile</DropdownItem>
-                            </NavLink>
-                            <NavLink tag="li">
-                                <DropdownItem className="nav-item">Settings</DropdownItem>
-                            </NavLink>
-                            <DropdownItem divider tag="li" />
-                            <NavLink tag="li">
-                                <DropdownItem className="nav-item">Log out</DropdownItem>
-                            </NavLink>
+                    
                         </DropdownMenu>
                     </UncontrolledDropdown>
                 
@@ -57,9 +47,9 @@ function NavBar({setShowLogin, setShowSignUp, user}) {
                             nav
                             onClick={(e) => e.preventDefault()}
                         >
-                        <div class="navbar-dropdown">
-                            <img src={avatar} className="navbar-dropdown-avatar" alt="" />
-                        </div>
+                            <div class="navbar-dropdown">
+                                <img src={avatar} className="navbar-dropdown-avatar" alt="" />
+                            </div>
                         </DropdownToggle>
                         <DropdownMenu className="dropdown-navbar" right tag="ul">
                             <NavLink tag="li">
@@ -88,53 +78,68 @@ function NavBar({setShowLogin, setShowSignUp, user}) {
                             nav
                             onClick={(e) => e.preventDefault()}
                         >
-                        <div class="navbar-dropdown">
-                            <img src={vietnam_icon} className="navbar-dropdown-language" alt="Language" />
-                        </div>
+                            <div class="navbar-dropdown">
+                                <img src={vietnam_icon} className="navbar-dropdown-language" alt="Language" />
+                            </div>
                         </DropdownToggle>
                         <DropdownMenu className="dropdown-navbar" right tag="ul">
                             <NavLink tag="li">
-                                <DropdownItem className="nav-item">Profile</DropdownItem>
+                                <DropdownItem className="nav-item">Vietnamese</DropdownItem>
                             </NavLink>
                             <NavLink tag="li">
-                                <DropdownItem className="nav-item">Played games</DropdownItem>
+                                <DropdownItem className="nav-item">English</DropdownItem>
                             </NavLink>
                             <NavLink tag="li">
-                                <DropdownItem className="nav-item">Friends</DropdownItem>
-                            </NavLink>
-                            <NavLink tag="li">
-                                <DropdownItem className="nav-item">Records</DropdownItem>
-                            </NavLink>
-                            <DropdownItem divider tag="li" />
-                            <NavLink tag="li">
-                                <DropdownItem className="nav-item">Log out</DropdownItem>
+                                <DropdownItem className="nav-item">Japanese</DropdownItem>
                             </NavLink>
                         </DropdownMenu>
                     </UncontrolledDropdown>
                 </Collapse>
             </div>
-    )
+        )
     }
     else {
         buttons = (
             <div className="nav-right-side collapse navbar-collapse ">
-                <button 
-                    className="navbar-btn" 
-                    name="showLogin"
-                    onClick={() => setShowLogin(true)}
-                    >Login
-                </button>
+                <Collapse navbar isOpen={collapseOpen}>
+                    <button 
+                        className="navbar-btn" 
+                        name="showLogin"
+                        onClick={() => setShowLogin(true)}
+                        >Login
+                    </button>
 
-                <button 
-                    className="navbar-btn" 
-                    name="showSignUp"
-                    onClick={() => setShowSignUp(true)}
-                    >Sign up
-                </button>
-                
-                <div class="navbar-dropdown">
-                    <img src={vietnam_icon} className="navbar-dropdown-language" alt="Language" />
-                </div>
+                    <button 
+                        className="navbar-btn" 
+                        name="showSignUp"
+                        onClick={() => setShowSignUp(true)}
+                        >Sign up
+                    </button>
+                    
+                    <UncontrolledDropdown nav>
+                        <DropdownToggle
+                            caret
+                            color="default"
+                            nav
+                            onClick={(e) => e.preventDefault()}
+                        >
+                            <div class="navbar-dropdown">
+                                <img src={vietnam_icon} className="navbar-dropdown-language" alt="Language" />
+                            </div>
+                        </DropdownToggle>
+                        <DropdownMenu className="dropdown-navbar" right tag="ul">
+                            <NavLink tag="li">
+                                <DropdownItem className="nav-item">Vietnamese</DropdownItem>
+                            </NavLink>
+                            <NavLink tag="li">
+                                <DropdownItem className="nav-item">English</DropdownItem>
+                            </NavLink>
+                            <NavLink tag="li">
+                                <DropdownItem className="nav-item">Japanese</DropdownItem>
+                            </NavLink>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>
+                </Collapse>
             </div>
         )
     }
