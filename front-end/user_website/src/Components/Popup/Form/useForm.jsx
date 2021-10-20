@@ -54,9 +54,8 @@ const useForm = (FormType, validator, setUser) => {
                         }
                     }
                 ).catch(
-                    err => console.log(err),
-                    setErrors(validator(FormType, 'Wrong email or password!'))
-                )
+                    err => setErrors(validator(FormType, 'Wrong email or password!'))
+                )  
             }
             if (FormType === "SignUp"){
                 axios.post('user/sign-up', values).then(

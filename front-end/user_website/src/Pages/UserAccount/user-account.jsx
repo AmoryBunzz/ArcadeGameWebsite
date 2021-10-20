@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import SideBar from "./SideBar/sidebar";
+import SideBar from "../../Components/PageComponents/SideBar/sidebar";
 import routes from "./user-account-routes";
 
 import logo from "../../Assets/Images/User/avatar3.jpg";
-import { BackgroundColorContext } from "./BackgroundColorContext";
+import { BackgroundColorContext } from "../../Components/PageComponents/BackgroundColorContext";
 
 
 function UserAccount(props) {

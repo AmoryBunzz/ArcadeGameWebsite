@@ -1,6 +1,6 @@
-import PlayedGames from "./PlayedGames/played-games";
-import Records from "./Records/records";
-import UserProfile from "./UserProfile/user-profile";
+import PlayedGames from "../../Components/PageComponents/PlayedGames/played-games";
+import Records from "../../Components/PageComponents/PersonalRecord/personal-record";
+import UserProfile from "../../Components/PageComponents/UserProfile/user-profile";
 
 var routes = [
   {

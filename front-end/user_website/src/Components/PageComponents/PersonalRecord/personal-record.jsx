@@ -1,6 +1,6 @@
 import React from "react";
 
-import './records.css'
+import './personal-record.css'
 
 import {
   Card,
@@ -11,7 +11,7 @@ import {
   Col,
 } from "reactstrap";
 
-function Record() {
+function PersonalRecord() {
   return (
     <>
       <div className="content">
@@ -73,4 +73,4 @@ function Record() {
   );
 }
 
-export default Record;
+export default PersonalRecord;
