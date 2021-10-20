@@ -1,0 +1,17 @@
+.content {
+  margin-top: -66px;
+}
+hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+.btn-save {
+  margin-left: 70px;
+  margin-right: 100px;
+  background: #e14eca;
+}
+
+.btn + .btn {
+  margin-left: 5px;
+}

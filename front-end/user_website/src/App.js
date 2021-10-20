@@ -5,11 +5,13 @@ import './Assets/Font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/cs
 
 import NavBar from './Components/PageLayout/Header/nav-bar';
 import HomePage from './Pages/HomePage/home-page';
+import UserAccount from './Pages/UserAccount/user-account';
 import Login from './Components/Popup/Form/login';
 import SignUp from './Components/Popup/Form/sign-up';
 import ForgotPassword from './Components/Popup/Form/forgot-password';
 import FriendList from './Components/PageComponents/FriendList/friend-list';
 import AboutUs from './Components/PageLayout/Footer/about-us';
+
 
 function App() {
   const [showLogin, setShowLogin] = useState(false)
@@ -34,11 +36,14 @@ function App() {
           <NavBar setShowLogin={setShowLogin} setShowSignUp={setShowSignUp} user={user}/>
         </div>
         
-        <div className="App-main">
-          <Switch>
+        
+        <Switch>
+          <div className="App-main">
             <Route path="/" component={HomePage}/>
-          </Switch>
-        </div>
+          </div>
+          <Route path="/user-account" render={(props) => <UserAccount {...props} />}></Route>
+        </Switch>
+        
 
         <div className="App-left-sidebar">
           <FriendList user={user}/>

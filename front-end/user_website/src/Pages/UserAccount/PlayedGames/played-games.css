@@ -1,0 +1,17 @@
+.thumbnail {
+  margin-left: 50px;
+}
+.col-lg-4 {
+  display: inline-block;
+}
+h3 {
+  margin-top: 4px;
+  padding-left: 40px;
+}
+.btn-default {
+  margin-left: 20px;
+}
+.game-img {
+  border-radius: 20%;
+  width: 150px;
+}

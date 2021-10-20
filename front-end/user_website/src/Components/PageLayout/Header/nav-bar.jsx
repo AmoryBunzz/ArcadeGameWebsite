@@ -6,10 +6,7 @@ import {
     DropdownMenu,
     DropdownItem,
     UncontrolledDropdown,
-    Navbar,
     NavLink,
-    Nav,
-    Container,
 } from "reactstrap";
 
 import './nav-bar.css'

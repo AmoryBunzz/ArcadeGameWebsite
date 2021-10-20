@@ -1,0 +1,130 @@
+.sidebar,
+.off-canvas-sidebar {
+  height: calc(100vh - 90px);
+  width: 230px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  margin-top: 80px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+.sidebar .nav,
+.off-canvas-sidebar .nav {
+  margin-top: 20px;
+  display: block;
+}
+.sidebar .nav .caret,
+.off-canvas-sidebar .nav .caret {
+  top: 14px;
+  position: absolute;
+  right: 10px;
+}
+.sidebar .nav li > a + div .nav,
+.off-canvas-sidebar .nav li > a + div .nav {
+  margin-top: 5px;
+}
+.sidebar .nav li > a + div .nav li > a,
+.off-canvas-sidebar .nav li > a + div .nav li > a {
+  margin-top: 0px;
+  padding: 8px 8px;
+}
+.sidebar .nav li > a,
+.off-canvas-sidebar .nav li > a {
+  margin: 10px 15px 0;
+  border-radius: 30px;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 0.62475rem;
+  padding: 10px 8px;
+  line-height: 1.625rem;
+}
+.sidebar .nav p,
+.off-canvas-sidebar .nav p {
+  margin: 0;
+  line-height: 30px;
+  position: relative;
+  display: block;
+  height: auto;
+  white-space: nowrap;
+}
+.sidebar .nav i,
+.off-canvas-sidebar .nav i {
+  font-size: 20px;
+  float: left;
+  margin-right: 12px;
+  line-height: 30px;
+  width: 34px;
+  text-align: center;
+  color: rgba(222, 222, 222, 0.8);
+  position: relative;
+}
+.sidebar .logo,
+.off-canvas-sidebar .logo {
+  position: relative;
+  padding: 0.5rem 0.7rem;
+  z-index: 4;
+}
+.sidebar .logo a.logo-mini,
+.off-canvas-sidebar .logo a.logo-mini {
+  float: left;
+  text-align: center;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.sidebar .logo a.logo-mini img,
+.off-canvas-sidebar .logo a.logo-mini img {
+  text-align: center;
+  width: 180px;
+}
+.sidebar .logo .simple-text,
+.off-canvas-sidebar .logo .simple-text {
+  padding: 0.5rem 0;
+  white-space: nowrap;
+  font-size: "Poppins", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  margin-left: 45px;
+  overflow: hidden;
+}
+.sidebar[data="blue"],
+.off-canvas-sidebar[data="blue"] {
+  background-color: #1d8cf8;
+}
+.main-panel {
+  position: relative;
+  float: right;
+  width: 100%;
+  min-height: 100vh;
+  border-top: 2px solid #e14eca;
+  background: white;
+}
+.main-panel[data="blue"] {
+  border-top: 2px solid #1d8cf8;
+}
+.main-panel[data="green"] {
+  border-top: 2px solid #00f2c3;
+}
+.main-panel[data="primary"] {
+  border-top: 2px solid #e14eca;
+}
+.main-panel > .content {
+  padding: 78px 30px 30px 280px;
+  min-height: calc(100vh - 70px);
+}
+.main-panel > .navbar {
+  margin-bottom: 0;
+}
+.main-panel .header {
+  margin-bottom: 50px;
+}

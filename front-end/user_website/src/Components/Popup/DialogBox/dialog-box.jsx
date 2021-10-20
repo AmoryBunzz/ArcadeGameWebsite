@@ -34,3 +34,5 @@ function DialogBox(){
         </div>
     )
 }
+
+export default DialogBox
