@@ -4,7 +4,7 @@ import useForm from './useForm.jsx'
 import Validator from "./validator";
 
 export const ForgotPassword = ({showForgotPassword, setShowForgotPassword, formRef, closeForm}) => {
-    const {handleSubmit, handleChange, values, errors} = useForm("SignUp", Validator)
+    const {handleSubmit, handleChange, values, errors} = useForm("ForgotPassword", Validator)
 
     return (showForgotPassword) ? (
         <form onSubmit={handleSubmit} className="popup-form"
@@ -23,10 +23,10 @@ export const ForgotPassword = ({showForgotPassword, setShowForgotPassword, formR
                         type="email"
                         className="form-control" 
                         placeholder="Your email"
-                        name="email"
-                        value={values.email}
+                        name="Email"
+                        value={values.Email}
                         onChange={handleChange}/>
-                    {errors.email && <p className="validator">{errors.email}</p>}
+                    {errors.Email && <p className="validator">{errors.Email}</p>}
                 </div>
                 
                 <div className="form-group">

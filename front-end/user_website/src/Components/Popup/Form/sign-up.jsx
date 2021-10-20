@@ -23,10 +23,10 @@ export const SignUp = ({showSignUp, setShowSignUp, setShowLogin, formRef, closeF
                         type="text" 
                         className="form-control" 
                         placeholder="Your Name"
-                        name="full_name"
-                        value={values.full_name}
+                        name="Full_name"
+                        value={values.Full_name}
                         onChange={handleChange}/>
-                    {errors.full_name && <p className="validator">{errors.full_name}</p>}
+                    {errors.Full_name && <p className="validator">{errors.Full_name}</p>}
                 </div>
 
                 <div className="form-group">
@@ -35,10 +35,10 @@ export const SignUp = ({showSignUp, setShowSignUp, setShowLogin, formRef, closeF
                         type="email" 
                         className="form-control" 
                         placeholder="Email"
-                        name="email"
-                        value={values.email}
+                        name="Email"
+                        value={values.Email}
                         onChange={handleChange}/>
-                    {errors.email && <p className="validator">{errors.email}</p>}
+                    {errors.Email && <p className="validator">{errors.Email}</p>}
                 </div>
 
                 <div className="form-group">
@@ -47,10 +47,10 @@ export const SignUp = ({showSignUp, setShowSignUp, setShowLogin, formRef, closeF
                         type="password" 
                         className="form-control" 
                         placeholder="Password"
-                        name="password"
-                        value={values.password}
+                        name="Password"
+                        value={values.Password}
                         onChange={handleChange}/>
-                    {errors.password && <p className="validator">{errors.password}</p>}
+                    {errors.Password && <p className="validator">{errors.Password}</p>}
                 </div>
 
                 <div className="form-group">
@@ -59,10 +59,10 @@ export const SignUp = ({showSignUp, setShowSignUp, setShowLogin, formRef, closeF
                         type="password" 
                         className="form-control" 
                         placeholder="Confirm password"
-                        name="confirm_password"
-                        value={values.confirm_password}
+                        name="Confirm_password"
+                        value={values.Confirm_password}
                         onChange={handleChange}/>
-                    {errors.confirm_password && <p className="validator">{errors.confirm_password}</p>}
+                    {errors.Confirm_password && <p className="validator">{errors.Confirm_password}</p>}
                 </div>
 
                 <div className="form-group">
@@ -71,8 +71,8 @@ export const SignUp = ({showSignUp, setShowSignUp, setShowLogin, formRef, closeF
                         <input 
                             type="radio" 
                             className="form-radio-btn"
-                            name="gender"
-                            checked={values.gender === "1"} 
+                            name="Gender"
+                            checked={values.Gender === "1"} 
                             value="1"
                             onChange={handleChange}/>
                     </label>
@@ -81,12 +81,12 @@ export const SignUp = ({showSignUp, setShowSignUp, setShowLogin, formRef, closeF
                         <input 
                             type="radio" 
                             className="form-radio-btn"
-                            name="gender"
-                            checked={values.gender === "0"}
+                            name="Gender"
+                            checked={values.Gender === "0"}
                             value="0"
                             onChange={handleChange}/>
                     </label>
-                    {errors.gender && <p className="validator">{errors.gender}</p>}
+                    {errors.Gender && <p className="validator">{errors.Gender}</p>}
                 </div>
                 
                 <div className="form-group">

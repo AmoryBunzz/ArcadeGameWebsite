@@ -43,7 +43,7 @@ function signUp(req, res){
                 
                     models.User.create(user).then(result => {
                         res.status(201).json({
-                            message: "User created successfully",
+                            message: "User created successfully!",
                         });
                     }).catch(error => {
                         res.status(500).json({
@@ -77,7 +77,8 @@ function login(req, res) {
                     }, 'secret', function(err, token){
                         res.status(200).json({
                             message: "Authentication successful!",
-                            token: token
+                            token: token,
+                            user: user
                         });
                     });
                 }

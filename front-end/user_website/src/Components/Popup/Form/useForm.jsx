@@ -1,30 +1,33 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from 'axios'
 
-const useForm = (FormType, validator) => {
-    const [values, setValues] = useState(() => {
+const useForm = (FormType, validator, setUser) => {
+
+    const default_values = () => {
         if (FormType === "Login"){
             return {
-                email: "",
-                password: ""
+                Email: "",
+                Password: ""
             }
         }
         if (FormType === "SignUp"){
             return {
-                full_name: "",
-                email: "",
-                password: "",
-                confirm_password: "",
-                gender: ""
+                Full_name: "",
+                Email: "",
+                Password: "",
+                Confirm_password: "",
+                Gender: ""
             }
         }
 
         if (FormType === "ForgotPassword"){
             return {
-                email: ""
+                Email: ""
             }
         }
-    })
+    }
+
+    const [values, setValues] = useState(default_values)
 
     const handleChange = e => {
         const { name, value } = e.target
@@ -38,16 +41,21 @@ const useForm = (FormType, validator) => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        
         setErrors(validator(FormType, values));
-    }
 
-    useEffect(() => {
         if (Object.keys(errors).length === 0){
             if (FormType === "Login"){
                 axios.post('user/login', values).then(
-                    res => console.log(res)
+                    res => {
+                        if (res.data.message === 'Authentication successful!'){
+                            localStorage.setItem('token', res.data.token)
+                            setUser(res.data.user)
+                        }
+                    }
                 ).catch(
-                    err => console.log(err)
+                    err => console.log(err),
+                    setErrors(validator(FormType, 'Wrong email or password!'))
                 )
             }
             if (FormType === "SignUp"){
@@ -65,10 +73,11 @@ const useForm = (FormType, validator) => {
                     err => console.log(err)
                 )
             }
-        }
-    }, [errors, FormType, values])
+            setValues(default_values)
+        }   
+    }
 
-    return { handleSubmit, handleChange, values , errors}
+    return { handleSubmit, handleChange, values , errors }
 }
 
 export default useForm;

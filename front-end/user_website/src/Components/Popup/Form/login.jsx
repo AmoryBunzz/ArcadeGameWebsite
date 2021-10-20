@@ -3,8 +3,8 @@ import './form.css'
 import useForm from './useForm.jsx'
 import Validator from "./validator";
 
-export const Login = ({showLogin, setShowLogin, setShowForgotPassword, setShowSignUp, formRef, closeForm}) => {
-    const {handleSubmit, handleChange, values, errors} = useForm("Login", Validator)
+export const Login = ({showLogin, setShowLogin, setShowForgotPassword, setShowSignUp, formRef, closeForm, setUser}) => {
+    const {handleSubmit, handleChange, values, errors} = useForm("Login", Validator, setUser)
 
     return (showLogin) ? (
         <form onSubmit={handleSubmit} className="popup-form"
@@ -23,10 +23,10 @@ export const Login = ({showLogin, setShowLogin, setShowForgotPassword, setShowSi
                         type="email" 
                         className="form-control" 
                         placeholder="Email"
-                        name="email"
-                        value={values.email}
+                        name="Email"
+                        value={values.Email}
                         onChange={handleChange}/>
-                    {errors.email && <p className="validator">{errors.email}</p>}
+                    {errors.Email && <p className="validator">{errors.Email}</p>}
                 </div>
 
                 <div className="form-group">
@@ -35,10 +35,10 @@ export const Login = ({showLogin, setShowLogin, setShowForgotPassword, setShowSi
                         type="password" 
                         className="form-control" 
                         placeholder="Password"
-                        name="password"
-                        value={values.password}
+                        name="Password"
+                        value={values.Password}
                         onChange={handleChange}/>
-                    {errors.password && <p className="validator">{errors.password}</p>}
+                    {errors.Password && <p className="validator">{errors.Password}</p>}
                 </div>
 
                 <div className="form-group">
