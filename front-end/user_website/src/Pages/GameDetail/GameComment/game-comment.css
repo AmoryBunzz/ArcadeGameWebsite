@@ -1,0 +1,80 @@
+.game-comment{
+    height: 200px;
+    background-color: rgb(199, 228, 255);
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+  .game-comment__account{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid rgba(160, 160, 160, 0.5);
+  }
+  .game-comment__account-header{
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+  }
+  .game-comment__account-btn{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .game-comment__account-login{
+    margin: 5px 8px 10px 8px;
+    display: flex;
+    
+  }
+  
+  .game-comment__account-btn{
+    flex: 1;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+  #test2{
+    display: none;
+  }
+  .game-comment--css{
+    display: flex; 
+    justify-content: space-between;
+  }
+  
+  
+  
+  .game-comment__content{
+    display: block;
+    font-size: 1.1rem;
+    margin:5px;
+  }
+  .game-comment__content3,
+  .game-comment__content2,
+  .game-comment__content1{
+    display: flex;
+    height:36px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    margin: 2px;
+  }
+  
+  .game-comment__content3,
+  .game-comment__content2{
+    width: 48%;
+    float: left;
+  }
+  
+  .comment__img{
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  .game-comment__desc{
+    margin: 2px 0 2px 5px;
+  }
+  .comment__user{
+    color: red;
+    font-weight: 700;
+  }
+  

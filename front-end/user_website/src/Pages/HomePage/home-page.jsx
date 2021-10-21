@@ -1,17 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
 import './home-page.css'
-import logo from '../../Assets/Images/App/app-logo.png';
 
-class HomePage extends Component {
-    state = {}
-    render() { 
-        return (
-            <div>
-                <h1>Welcome to Arcade Game</h1>
-                <img src={logo} className="app-logo" alt="logo"/>
+import FriendList from './FriendList/friend-list';
+import FamousGame from "./FamousGame/famous-game";
+import NewGame from "./NewGame/new-game";
+
+function HomePage({user}) {
+  return (
+      <div>
+          <div className="App-left-sidebar">
+              <FriendList user={user}/>
+          </div>
+          <div className='grid wide'>
+            <div className='row'>
+              <div className='col-sm-9 col-md-6 col-lg-8'>
+                <FamousGame/>
+              </div>
             </div>
-        );
-    }
+          </div>
+          <div className='grid wide'>
+              <div className='row'>
+                  <div className='col-sm-9 col-md-6 col-lg-8'>
+                    <NewGame/>
+                  </div>
+              </div>
+          </div>
+      </div>
+  );
 }
  
 export default HomePage;

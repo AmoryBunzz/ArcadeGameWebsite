@@ -5,11 +5,11 @@ import './Assets/Font/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/cs
 
 import NavBar from './Components/PageLayout/Header/nav-bar';
 import HomePage from './Pages/HomePage/home-page';
-import UserAccount from './Pages/UserAccount/user-account';
+import GameDetail from './Pages/GameDetail/game-detail';
+// import UserAccount from './Pages/UserAccount/user-account';
 import Login from './Components/Popup/Form/login';
 import SignUp from './Components/Popup/Form/sign-up';
 import ForgotPassword from './Components/Popup/Form/forgot-password';
-import FriendList from './Components/PageComponents/FriendList/friend-list';
 import AboutUs from './Components/PageLayout/Footer/about-us';
 
 
@@ -39,15 +39,12 @@ function App() {
         
         <Switch>
           <div className="App-main">
-            <Route path="/" component={HomePage}/>
+            {/* <Route path="/" component={HomePage} user={user}/> */}
+            <Route path='/game-detail' component={GameDetail} />
           </div>
-          <Route path="/user-account" render={(props) => <UserAccount {...props} />}></Route>
+          {/* <Route path="/user-account" render={(props) => <UserAccount {...props} />}></Route> */}
         </Switch>
         
-
-        <div className="App-left-sidebar">
-          <FriendList user={user}/>
-        </div>
 
         <div className="App-footer">
           <AboutUs/>

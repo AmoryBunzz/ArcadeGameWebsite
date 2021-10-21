@@ -1,0 +1,63 @@
+h3 {
+  height: 50px;
+  font-size: 2rem;
+}
+.game-diff {
+  height: 600px;
+  background-color: rgb(199, 228, 255);
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 35px;
+  width: 1200px;
+}
+.game-diff--css {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px, 0;
+}
+.game-diff-link {
+  height: 250px;
+  width: 23%;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 5px 0;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  top: 0;
+  transition: top linear 0.2s;
+}
+.game-diff-link:hover {
+  top: -5px;
+  opacity: 0.8;
+}
+
+.game-diff__img {
+  height: 70%;
+  width: 100%;
+}
+
+.game-diff__name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  height: 15%;
+  padding: 5px 0 0 5px;
+}
+
+.game-diff__dev {
+  font-size: 1.4rem;
+  font-weight: 400;
+  height: 15%;
+  padding: 5px 0 0 5px;
+  height: 13%;
+}
+.InfiniteCarousel {
+  height: 350px;
+  background-color: rgb(199, 144, 225);
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 60px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,18 @@
+.game-info{
+    border: 4px solid #ff99cc;
+    margin-top:10px;
+    background: rgb(199, 228, 255);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  .game-info__report{
+    display: flex;
+    margin: 10px 10px;
+  }
+  .report-flag{
+    padding: 3px 5px 0 5px;
+  }
